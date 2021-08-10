@@ -1,0 +1,96 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: $beige;
+    color: $black;
+    font-family: $font-body-serif;
+    font-size: 1.375rem;
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+}
+.skip-link.screen-reader-text {
+    position: absolute;
+    left: -1000vw;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50; // above pantone color stack
+}
+main {
+    flex-grow: 1;
+}
+main, footer {
+    flex-shrink: 0;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 50;
+}
+.pantone {
+    &__hero {
+        height: calc(100vh - 3rem);
+    }
+    &__stack {
+        position: relative;
+        height: 100vh;
+        &.fixed-position {}
+    }
+    &__color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: transform 0.4s ease-in-out;
+        &.current-color {
+            transform: translateX(0) translateY(0);
+        }
+        &.color-before {
+            &.swipe {
+                &-0 {
+                    transform: translateX(-105%) translateY(-105%);
+                }
+                &-1, &-3 {
+                    transform: translateY(-105%);
+                }
+                &-2 {
+                    transform: translateX(105%) translateY(-105%);
+                }
+            }
+        }
+        &--description {
+            border-radius: 2px;
+        }
+    }
+    &__buttons {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: auto;
+        z-index: 50;
+        &--button {
+            font-size: 1rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: 0.2s;
+            &.active {
+                cursor: pointer;
+                pointer-events: all;
+                opacity: 1;
+            }
+        }
+    }
+}

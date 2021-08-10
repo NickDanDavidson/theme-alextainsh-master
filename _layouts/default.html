@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    {% include html-head.html %}
+
+    <body>
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+        {% include header.html %}
+
+		<main class="page-content container-fluid">
+			<div class="wrapper row no-gutters">
+				{{ content }}
+			</div>
+		</main>
+
+		{% include footer.html %}
+
+    </body>
+</html>

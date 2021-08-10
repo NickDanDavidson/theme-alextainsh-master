@@ -1,0 +1,44 @@
+.nav {
+    position: absolute;
+    top: 1.75rem;
+    left: 4rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-0.5rem);
+    transition: 0.2s;
+    &.nav-open {
+        pointer-events: all;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    &__toggle {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: transparent;
+        border: 3px solid $black;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover, &.nav-open {
+            background-color: $black;
+        }
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin-left: 2rem;
+        .nav-open & {
+            background-color: $beige;
+        }
+        &--item {
+            margin: 0.25rem 0;
+            a {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
