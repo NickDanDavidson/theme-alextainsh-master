@@ -6,26 +6,26 @@
 }
 @font-face {
     font-family: 'brandon-grotesque';
-    src: url('/wp-content/themes/ndd-new/assets/fonts/brandon-grotesque/Brandon_reg.otf') format('opentype');
+    src: url('/assets/fonts/brandon-grotesque/Brandon_reg.otf') format('opentype');
     font-display: swap;
 }
 @font-face {
     font-family: 'BG-italic';
-    src: url('/wp-content/themes/ndd-new/assets/fonts/brandon-grotesque/Brandon_reg_it.otf') format('opentype');
+    src: url('/assets/fonts/brandon-grotesque/Brandon_reg_it.otf') format('opentype');
     font-display: swap;
 }
 @font-face {
     font-family: 'BG-bold';
-    src: url('/wp-content/themes/ndd-new/assets/fonts/brandon-grotesque/Brandon_bld.otf') format('opentype');
+    src: url('/assets/fonts/brandon-grotesque/Brandon_bld.otf') format('opentype');
     font-display: swap;
 }
 @font-face {
-    font-family: 'league-spartan';
-    src: url('/wp-content/themes/ndd-new/assets/fonts/league-spartan/LeagueSpartan-Bold.otf') format('opentype');
+    font-family: 'League-Spartan';
+    src: url('/assets/fonts/league-spartan/LeagueSpartan-Bold.otf') format('opentype');
     font-display: swap;
 }
 
-$font-header: 'league-spartan', sans-serif;
+$font-header: 'League-Spartan', sans-serif;
 $font-body: 'Concourse', 'brandon-grotesque', sans-serif;
 $font-bold: 'Concourse', 'BG-bold', sans-serif;
 $font-italic: 'Concourse', 'BG-italic', sans-serif;
