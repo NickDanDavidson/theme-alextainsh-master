@@ -1,10 +1,10 @@
 <section id="photo-grid" class="col py-5 hero-slide hero-slide__photos">
     <div class="container py-3 py-md-5">
         <div class="row {% if page.grid_heading %}py-5{% else %}pt-0 pb-5{% endif %} justify-content-center align-items-center text-center">
-            {% if page.grid_heading %}
+            {% if include.grid_heading %}
                 <div class="col-4">
-                    <h3 class="mb-3">{{ page.grid_heading }}</h3>
-                    <p>{{ page.grid_copy }}</p>
+                    <h3 class="mb-3">{{ include.heading }}</h3>
+                    <p>{{ include.copy }}</p>
                 </div>
             {% endif %}
             <div id="photos-grid" class="col-12 hero-slide__photos--grid carousel slide carousel-fade">
@@ -14,18 +14,16 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="row hero-slide__photos--grid-photos photos-OF-me carousel-item active">
-                        {% for item in page.grid_images_of_me %}
+                        {% for item in include.images_of_me %}
                             <div class="col-4 hero-slide__photos--grid-photo" data-slide-toggle="{{ forloop.index0 }}">
-                                <div class="bg-img" style="background-image: url('{{ item.grid_image }}')"></div>
-                                <!-- TODO: connect image src -->
+                                <div class="bg-img" style="background-image: url('{{ item.image_of_me }}')"></div>
                             </div>
                         {% endfor %}
                     </div>
                     <div class="row hero-slide__photos--grid-photos photos-BY-me carousel-item">
-                        {% for item in page.grid_images_by_me %}
+                        {% for item in include.images_by_me %}
                             <div class="col-4 hero-slide__photos--grid-photo" data-slide-toggle="{{ forloop.index0 }}">
-                                <div class="bg-img" style="background-image: url('{{ item.grid_image }}')"></div>
-                                <!-- TODO: connect image src -->
+                                <div class="bg-img" style="background-image: url('{{ item.image_by_me }}')"></div>
                             </div>
                         {% endfor %}
                     </div>

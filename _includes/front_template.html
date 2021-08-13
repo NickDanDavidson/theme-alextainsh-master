@@ -5,10 +5,9 @@
                 <div class="carousel-container">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                         <div class="carousel-inner">
-                            {% for item in page.home_images %}
+                            {% for item in include.images %}
                                 <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}" data-interval="5000">
                                     <div class="bg-img" style="background-image: url('{{ item.slide_image }}');"></div>
-                                    <!-- TODO: connect img src -->
                                 </div>
                             {% endfor %}
                         </div>
@@ -16,9 +15,9 @@
                 </div>
             </div>
             <div class="col-12 col-md-auto pl-md-5 text-center">
-                <h1 class="mb-2">Alex Tainsh</h1>
-                <p class="mb-0 h4"><em>Marketing & Promotions Manager</em></p>
-                <p class="h4">Chattanooga Lookouts</p>
+                <h1 class="mb-2">{{ include.header }}</h1>
+                <p class="mb-0 h4"><em>{{ include.subheader1 }}</em></p>
+                <p class="h4">{{ include.subheader2 }}</p>
             </div>
         </div>
     </div>

@@ -17,18 +17,18 @@
                 {% if section.layout == "text_layout" %}
                     <div class="col-12 py-5">
                         <div class="row justify-content-center align-items-center">
-                            <div class="col-12 col-md-6 text-center {% if section.include_image and section.image_position == 'left' %}order-1 mt-4 mt-md-0{% else %}mb-4 mb-md-0{% endif %}">
+                            <div class="col-12 col-md-6 text-center {% if section.text_image and section.text_image_position == 'left' %}order-1 mt-4 mt-md-0{% else %}mb-4 mb-md-0{% endif %}">
                                 <div class="row justify-content-center">
                                     <div class="col-10 pt-1 wysiwyg">
-                                        {% if section.header %}<h3>{{ section.header }}</h3>{% endif %}
-                                        <p>{{ section.copy }}</p>
+                                        {% if section.text_header %}<h3>{{ section.text_header }}</h3>{% endif %}
+                                        <p>{{ section.text_copy }}</p>
                                     </div>
                                 </div>
                             </div>
-                            {% if section.include_image %}
+                            {% if section.text_image %}
                                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                                     <div class="bg-img__container bg-img__container--square">
-                                        <div class="bg-img" style="background-image: url('{{ Image(section.image).src }}')"></div>
+                                        <div class="bg-img" style="background-image: url('{{ section.text_image }}')"></div>
                                     </div>
                                 </div>
                             {% endif %}
@@ -38,14 +38,14 @@
                     <div class="col-12 py-5">
                         <div class="row justify-content-center align-items-center">
                             <div class="col text-center wysiwyg">
-                                {% if section.video_heading %}
-                                    <h3>{{ section.video_heading }}</h3>
+                                {% if section.video_header %}
+                                    <h3>{{ section.video_header }}</h3>
                                 {% endif %}
                                 {% if section.video_copy %}
                                     <p>{{ section.video_copy }}</p>
                                 {% endif %}
                                 <div class="pt-3 hero-slide__work--video">
-                                    {{ section.video }}
+                                    {{ section.video_link }}
                                 </div>
                             </div>
                         </div>
