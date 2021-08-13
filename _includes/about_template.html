@@ -1,0 +1,29 @@
+<section id="about" class="col py-5 hero-slide hero-slide__about">
+    <div class="container py-5">
+        <div class="row pt-md-5 pb-3 pb-md-5 px-md-5">
+            <div class="col text-center text-md-left">
+                <h2>{{ include.heading }}</h2>
+            </div>
+            <div class="w-100"></div>
+        </div>
+        <div class="non-flex-row">
+            <div class="col-auto hero-slide__about--lead-in">
+                <div class="hero-slide__about--image">
+                    <div class="hero-slide__about--image-container" style="position: relative;">
+                        <div class="bg-img bg-overlay" style="background-image: url('{{ include.image }}');"></div>
+                        <!-- TODO: connect Cloudinary photo src -->
+                    </div>
+                </div>
+            </div>
+            <div class="col wysiwyg px-0 px-md-3">
+                {{ include.lead_in }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="w-100"></div>
+            <div class="col py-5 wysiwyg">
+                {{ include.content }}
+            </div>
+        </div>
+    </div>
+</section>

@@ -4,16 +4,57 @@ title: Home
 permalink: /
 ---
 
-<section class="home__hero">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-8 offset-md-4 mb-4 mt-5 pt-5">
-                <h1 class="display">{{ page.display_text }}</h1>
-                <h3>{{ page.display_subtext }}</h3>
-            </div>
-            <div class="col-12 col-md-8 offset-md-4">
-                {{ page.hero_description }}
-            </div>
+<div id="mainCarousel" class="container carousel" data-interval="false" data-hover="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            {% capture home_images %}{{ page.home_images }}{% endcapture %}
+            {% include front_template.html images=home_images %}
+        </div>
+        <div class="carousel-item">
+            {% capture about_heading %}{{ page.about_heading }}{% endcapture %}
+            {% capture about_image %}{{ page.about_image }}{% endcapture %}
+            {% capture about_lead_in %}{{ page.about_lead_in }}{% endcapture %}
+            {% capture about_content %}{{ page.about_content }}{% endcapture %}
+
+            {% include about_template.html
+                heading=about_heading
+                image=about_image
+                lead_in=about_lead_in
+                content=about_content %}
+        </div>
+        <div class="carousel-item">
+            {% capture work_head_header %}{{ page.work_head_header }}{% endcapture %}
+            {% capture work_head_copy %}{{ page.work_head_copy }}{% endcapture %}
+            {% capture work_head_video %}{{ page.work_head_video }}{% endcapture %}
+            {% capture work_sections %}{{ page.work_sections }}{% endcapture %}
+
+            {% include work_template.html
+                head_header=work_head_header
+                head_copy=work_head_copy
+                head_video=work_head_video
+                sections=work_sections %}
+        </div>
+        <div class="carousel-item">
+            {% capture grid_heading %}{{ page.grid_heading }}{% endcapture %}
+            {% capture grid_copy %}{{ page.grid_copy }}{% endcapture %}
+            {% capture grid_images_of_me %}{{ page.grid_images_of_me}}{% endcapture %}
+            {% capture grid_images_by_me %}{{ page.grid_images_by_me }}{% endcapture %}
+
+            {% include media_template.html
+                heading=grid_heading
+                copy=grid_copy
+                images_of=grid_images_of_me
+                images_by=grid_images_by_me %}
+        </div>
+        <div class="carousel-item">
+            {% capture contact_heading %}{{ page.contact_heading }}{% endcapture %}
+            {% capture contact_copy %}{{ page.contact_copy }}{% endcapture %}
+            {% capture contact_image %}{{ page.contact_image }}{% endcapture %}
+
+            {% include contact_template.html
+                heading=contact_heading
+                copy=contact_copy
+                image=contact_image %}
         </div>
     </div>
-</section>
+</div>

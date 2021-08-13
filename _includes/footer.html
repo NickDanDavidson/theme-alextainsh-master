@@ -1,18 +1,18 @@
-<footer class="site-footer py-2">
+<footer id="footer" class="site-footer bg-black text-white py-2">
     <div class="container">
         <div class="row align-items-center justify-content-md-end pl-md-5">
-            <div class="col-auto site-footer__copyright">
+            <div class="col site-footer__copyright">
                 <div class="row align-contens-center justify-content-end">
                     <div class="col-auto">
-                        <p class="m-0">&copy; {{ "now" | date: "%Y" }}</p>
+                        <p class="m-0">&copy; {{ "now" | date: "%Y" }} Alex Tainsh</p>
                     </div>
                 </div>
             </div>
             <div class="col-auto site-footer__media">
                 <div class="row justify-content-center justify-content-md-end text-center text-md-right pr-5">
                     {% for item in site.data.social_media.items %}
-                        <div class="col-auto pr-0">
-                            <a href="{{ item.link }}" target="_blank" class="site-footer__media--button no-underline"><i class="fab {{ item.fa-icon }}"></i></a>
+                        <div class="col-auto {% if forloop.index0 == 0 %}pl-0 pl-md-4{% else %}pl-4{% endif %} pr-0">
+                            <a href="{{ item.link }}" target="_blank" class="site-footer__media--button"><i class="fab {{ item.fa-icon }}"></i></a>
                         </div>
                     {% endfor %}
                 </div>
@@ -22,13 +22,13 @@
 </footer>
 
 <script>
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                });
-            }
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
         });
-    }
+      }
+    });
+  }
 </script>

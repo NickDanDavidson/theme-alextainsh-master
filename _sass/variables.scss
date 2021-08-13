@@ -1,74 +1,37 @@
 // Fonts
 @font-face {
-    font-family: 'Concourse4';
-    src: url('/assets/fonts/Concourse/Concourse OT 4 Medium.otf') format('opentype');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Concourse3';
+    font-family: 'Concourse';
     src: url('/assets/fonts/Concourse/Concourse OT 3 Book.otf') format('opentype');
     font-display: swap;
 }
 @font-face {
-    font-family: 'Equity';
-    src: url('/assets/fonts/Equity/Equity OT A Regular.otf') format('opentype');
+    font-family: 'brandon-grotesque';
+    src: url('/wp-content/themes/ndd-new/assets/fonts/brandon-grotesque/Brandon_reg.otf') format('opentype');
     font-display: swap;
 }
 @font-face {
-    font-family: 'EquityItalic';
-    src: url('/assets/fonts/Equity/Equity OT A Italic.otf') format('opentype');
+    font-family: 'BG-italic';
+    src: url('/wp-content/themes/ndd-new/assets/fonts/brandon-grotesque/Brandon_reg_it.otf') format('opentype');
     font-display: swap;
 }
 @font-face {
-    font-family: 'HKGrotesk';
-    src: url('/assets/fonts/HK Grotesk/HKGrotesk-Regular.otf') format('opentype');
+    font-family: 'BG-bold';
+    src: url('/wp-content/themes/ndd-new/assets/fonts/brandon-grotesque/Brandon_bld.otf') format('opentype');
     font-display: swap;
 }
 @font-face {
-    font-family: 'HKGroteskBlack';
-    src: url('/assets/fonts/HK Grotesk/HKGrotesk-Black.otf') format('opentype');
+    font-family: 'league-spartan';
+    src: url('/wp-content/themes/ndd-new/assets/fonts/league-spartan/LeagueSpartan-Bold.otf') format('opentype');
     font-display: swap;
 }
 
-$font-header: 'Concourse4', 'HKGroteskBlack', sans-serif;
-$font-header-thin: 'Concourse3', sans-serif;
-$font-body-sans: 'Concourse', 'HKGrotesk', sans-serif;
-$font-body-serif: 'Equity', serif;
-$font-bold: 'Concourse', 'HK-grotesk-black', sans-serif;
-$font-italic: 'EquityItalic', 'HK-grotesk-italic', sans-serif;
+$font-header: 'league-spartan', sans-serif;
+$font-body: 'Concourse', 'brandon-grotesque', sans-serif;
+$font-bold: 'Concourse', 'BG-bold', sans-serif;
+$font-italic: 'Concourse', 'BG-italic', sans-serif;
 
 // Colors
-// Pantone Colors of the Year
-$cerulean: #98b4d4;       // 2000
-$fuschiarose: #c3447a;    // 2001
-$truered: #bc243c;        // 2002
-$aquasky: #7fcdcd;        // 2003
-$tigerlily: #e15d44;      // 2004
-$blueturquoise: #55b4b0;  // 2005
-$sanddollar: #dfcfbe;     // 2006
-$chilipepper: #9b2335;    // 2007
-$blueiris: #5b5ea6;       // 2008
-$mimosa: #efc050;         // 2009
-$turquoise: #45b8ac;      // 2010
-$honeysuckle: #d65076;    // 2011
-$tangerinetango: #e2492f; // 2012
-$emerald: #009874;        // 2013
-$radiantorchid: #b163a3;  // 2014
-$marsala: #955251;        // 2015
-$rosequartz: #f7caca;     // 2016
-$serenity: #93a9d1;       // 2016
-$greenery: #88b04b;       // 2017
-$ultraviolet: #5f4b8b;    // 2018
-$livingcoral: #ff6f61;    // 2019
-$classicblue: #0f4c81;    // 2020
-$illuminating: #f5df4d;   // 2021
-$ultimategray: #939597;   // 2021
-
-// Theme Colors
-$lightpink: #fff5f2;
-$beige: #f3eed9;
-$brown: #bc827a;
-$gray: #798897;
 $black: #353535;
 $white: #efefef;
-$primary: $livingcoral;
+$red: #e82524;
+$primary: $red;

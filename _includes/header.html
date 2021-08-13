@@ -1,12 +1,11 @@
 <header class="header">
-    <div class="nav__toggle"></div>
-    <nav class="nav container">
-        <ul class="nav__list row justify-content-center">
-            {% for item in site.data.navigation.items %}
-                <li class="nav__list--item col-auto" data-nav-to="{{ forloop.index0 }}">
-                    <a href="{{ item.link }}"><h5 class="mb-0">{{ item.name }}</h5></a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
+    <div class="wrapper">
+        <nav id="nav-main" class="nav-main container-fluid" role="navigation">
+            <ul class="nav-main__list row text-center justify-content-center mb-0 py-3 px-0">
+                {% for item in site.data.navigation.items %}
+                    <li class="col-auto py-1 nav-main__list--item h5" data-nav-to="{{ loop.index0 }}"><span>{{ item.title }}</span></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
 </header>

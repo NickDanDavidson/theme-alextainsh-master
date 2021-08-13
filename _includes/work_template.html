@@ -1,0 +1,92 @@
+<section id="work" class="col py-5 hero-slide hero-slide__work">
+    <div class="container py-5">
+        <div class="row py-5 tilted-media__row">
+            <div class="col col-md-6 tilted-media__text">
+                <h3>{{ page.work_head_header }}</h3>
+                <p>{{ page.work_head_copy }}</p>
+            </div>
+            <div class="hero-slide__work--head-vimeo tilted-media__container">
+                <!-- <div class="modal-background"></div> -->
+                <div class="tilted-media__item">
+                    <iframe src="{{ page.work_page_head_video }}" width="100%" height="100%" frameborder="0" allow="fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                <div class="modal-close__button"></div>
+            </div>
+            <div class="w-100"></div>
+            {% for section in page.work_sections %}
+                {% if section.layout == "text_layout" %}
+                    <div class="col-12 py-5">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 col-md-6 text-center {% if section.include_image and section.image_position == 'left' %}order-1 mt-4 mt-md-0{% else %}mb-4 mb-md-0{% endif %}">
+                                <div class="row justify-content-center">
+                                    <div class="col-10 pt-1 wysiwyg">
+                                        {% if section.header %}<h3>{{ section.header }}</h3>{% endif %}
+                                        <p>{{ section.copy }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if section.include_image %}
+                                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                    <div class="bg-img__container bg-img__container--square">
+                                        <div class="bg-img" style="background-image: url('{{ Image(section.image).src }}')"></div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% elseif section.layout == "centered_video" %}
+                    <div class="col-12 py-5">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col text-center wysiwyg">
+                                {% if section.video_heading %}
+                                    <h3>{{ section.video_heading }}</h3>
+                                {% endif %}
+                                {% if section.video_copy %}
+                                    <p>{{ section.video_copy }}</p>
+                                {% endif %}
+                                <div class="pt-3 hero-slide__work--video">
+                                    {{ section.video }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% elseif section.layout == "image_gallery" %}
+                    <div class="col-12 py-5">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col hero-slide__work--image-gallery d-flex justify-content-center">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        {% for item in section.gallery_images %}
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.index0 == 0 %}active{% endif %}"></li>
+                                        {% endfor %}
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        {% for item in section.gallery_images %}
+                                            <div class="carousel-item {% if forloop.index0 == 0 %}active{% endif %}">
+                                                <div class="bg-img" style="background-image: url('{{ item.gallery_image
+                                                 }}');"></div>
+                                                 <!-- TODO: connect img src -->
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5>{{ item.caption_header }}</h5>
+                                                    <p>{{ item.caption_copy }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

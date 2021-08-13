@@ -39,12 +39,9 @@
         &::after {
             @extend %pos-abs-full;
             // background-image: linear-gradient(to bottom, transparent, transparent 50%, fade-out($primary, 0.5));
-            // background-color: fade-out($primary, 0.75);
+            background-color: fade-out($primary, 0.75);
             content: "";
         }
-    }
-    &-primary {
-        background-color: $primary;
     }
     &-white {
         background-color: $white;
@@ -52,28 +49,19 @@
     &-black {
         background-color: $black;
     }
-    &-beige {
-        background-color: $beige;
-    }
-    &-gray {
-        background-color: $gray;
-    }
-    &-brown {
-        background-color: $brown;
+    &-red {
+        background-color: $red;
     }
 }
 .text {
     &-white {
-        color: $white;
+        color: #fff;
     }
     &-black {
         color: $black;
     }
-    &-primary {
-        color: $primary;
-    }
-    &-gra7 {
-        color: $gray;
+    &-red {
+        color: $red;
     }
 }
 .columns {

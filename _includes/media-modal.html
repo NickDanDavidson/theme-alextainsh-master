@@ -1,0 +1,39 @@
+<div class="hero-slide__photos--modal">
+    <div id="modalCarouselOfMe" class="hero-slide__photos--modal-carousel carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            {% for item in page.grid_images_of_me %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}">
+                    <div class="bg-img" style="background-image: url('{{ item.grid_image }}')"></div>
+                    <!-- TODO: connect img src -->
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#modalCarouselOfMe" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#modalCarouselOfMe" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div id="modalCarouselByMe" class="hero-slide__photos--modal-carousel carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            {% for item in page.grid_images_by_me %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}">
+                    <div class="bg-img" style="background-image: url('{{ item.grid_image }}')"></div>
+                    <!-- TODO: connect img src -->
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#modalCarouselByMe" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#modalCarouselByMe" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="hero-slide__photos--modal-close"></div>
+</div>
