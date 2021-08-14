@@ -2,18 +2,18 @@
     <div class="container py-5">
         <div class="row py-5 tilted-media__row">
             <div class="col col-md-6 tilted-media__text">
-                <h3>{{ page.work_head_header }}</h3>
-                <p>{{ page.work_head_copy }}</p>
+                <h3>{{ include.head_header }}</h3>
+                <p>{{ include.head_copy }}</p>
             </div>
             <div class="hero-slide__work--head-vimeo tilted-media__container">
                 <!-- <div class="modal-background"></div> -->
                 <div class="tilted-media__item">
-                    <iframe src="{{ page.work_page_head_video }}" width="100%" height="100%" frameborder="0" allow="fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <iframe src="{{ include.head_video }}" width="100%" height="100%" frameborder="0" allow="fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
                 <div class="modal-close__button"></div>
             </div>
             <div class="w-100"></div>
-            {% for section in page.work_sections %}
+            {% for section in include.sections %}
                 {% if section.layout == "text_layout" %}
                     <div class="col-12 py-5">
                         <div class="row justify-content-center align-items-center">
