@@ -15,5 +15,11 @@
 
 		{% include footer.html %}
 
+        {% if page.title == "Home" %}
+            {% include media_modal.html
+                images_of_me=page.grid_section.images_of_me
+                images_by_me=page.grid_section.images_by_me %}
+        {% endif %}
+
     </body>
 </html>

@@ -1,10 +1,9 @@
 <div class="hero-slide__photos--modal">
     <div id="modalCarouselOfMe" class="hero-slide__photos--modal-carousel carousel slide" data-interval="false">
         <div class="carousel-inner">
-            {% for item in page.grid_images_of_me %}
+            {% for item in include.images_of_me %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}">
-                    <div class="bg-img" style="background-image: url('{{ item.grid_image }}')"></div>
-                    <!-- TODO: connect img src -->
+                    <div class="bg-img" style="background-image: url('{{ item.image_of_me }}')"></div>
                 </div>
             {% endfor %}
         </div>
@@ -19,10 +18,9 @@
     </div>
     <div id="modalCarouselByMe" class="hero-slide__photos--modal-carousel carousel slide" data-interval="false">
         <div class="carousel-inner">
-            {% for item in page.grid_images_by_me %}
+            {% for item in include.images_by_me %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}">
-                    <div class="bg-img" style="background-image: url('{{ item.grid_image }}')"></div>
-                    <!-- TODO: connect img src -->
+                    <div class="bg-img" style="background-image: url('{{ item.image_by_me }}')"></div>
                 </div>
             {% endfor %}
         </div>
