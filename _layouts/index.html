@@ -7,10 +7,10 @@ permalink: /
 <div id="mainCarousel" class="container carousel" data-interval="false" data-hover="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            {% capture home_images %}{{ page.home_images }}{% endcapture %}
-            {% capture home_header %}{{ page.hero_header }}{% endcapture %}
-            {% capture home_subheader1 %}{{ page.hero_subheader1 }}{% endcapture %}
-            {% capture home_subheader2 %}{{ page.hero_subheader2 }}{% endcapture %}
+            {% capture home_images %}{{ page.home_section.home_images }}{% endcapture %}
+            {% capture home_header %}{{ page.home_section.hero_header }}{% endcapture %}
+            {% capture home_subheader1 %}{{ page.home_section.hero_subheader1 }}{% endcapture %}
+            {% capture home_subheader2 %}{{ page.home_section.hero_subheader2 }}{% endcapture %}
 
             {% include front_template.html
                 images=home_images
