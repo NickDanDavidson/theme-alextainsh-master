@@ -6,11 +6,6 @@ permalink: /
 <div id="mainCarousel" class="container carousel" data-interval="false" data-hover="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <!-- {% capture home_images %}{{ page.home_section.home_images }}{% endcapture %}
-            {% capture home_header %}{{ page.home_section.hero_header }}{% endcapture %}
-            {% capture home_subheader1 %}{{ page.home_section.hero_subheader1 }}{% endcapture %}
-            {% capture home_subheader2 %}{{ page.home_section.hero_subheader2 }}{% endcapture %} -->
-
             {% include front_template.html
                 images=page.home_section.home_images
                 header=page.home_section.hero_header
@@ -18,11 +13,6 @@ permalink: /
                 subheader2=page.home_section.hero_subheader2 %}
         </div>
         <div class="carousel-item">
-            <!-- {% capture about_heading %}{{ page.about_section.heading }}{% endcapture %}
-            {% capture about_image %}{{ page.about_section.image }}{% endcapture %}
-            {% capture about_lead_in %}{{ page.about_section.lead_in }}{% endcapture %}
-            {% capture about_content %}{{ page.about_section.content }}{% endcapture %} -->
-
             {% include about_template.html
                 heading=page.about_section.heading
                 image=page.about_section.image
@@ -30,11 +20,6 @@ permalink: /
                 content=page.about_section.content %}
         </div>
         <div class="carousel-item">
-            <!-- {% capture work_head_header %}{{ page.work_section.header }}{% endcapture %}
-            {% capture work_head_copy %}{{ page.work_section.head_copy }}{% endcapture %}
-            {% capture work_head_video %}{{ page.work_section.head_video }}{% endcapture %}
-            {% capture work_sections %}{{ page.work_section.sections }}{% endcapture %} -->
-
             {% include work_template.html
                 head_header=page.work_section.header
                 head_copy=page.work_section.head_copy
@@ -42,11 +27,6 @@ permalink: /
                 sections=page.work_section.sections %}
         </div>
         <div class="carousel-item">
-            <!-- {% capture grid_heading %}{{ page.grid_section.heading }}{% endcapture %}
-            {% capture grid_copy %}{{ page.grid_section.copy }}{% endcapture %}
-            {% capture grid_images_of_me %}{{ page.grid_section.images_of_me}}{% endcapture %}
-            {% capture grid_images_by_me %}{{ page.grid_section.images_by_me }}{% endcapture %} -->
-
             {% include media_template.html
                 heading=page.grid_section.heading
                 copy=page.grid_section.copy
@@ -54,10 +34,6 @@ permalink: /
                 images_by_me=page.grid_section.images_by_me %}
         </div>
         <div class="carousel-item">
-            <!-- {% capture contact_heading %}{{ page.contact_section.heading }}{% endcapture %}
-            {% capture contact_copy %}{{ page.contact_section.copy }}{% endcapture %}
-            {% capture contact_image %}{{ page.contact_section.side_image }}{% endcapture %} -->
-
             {% include contact_template.html
                 heading=page.contact_section.heading
                 copy=page.contact_section.copy

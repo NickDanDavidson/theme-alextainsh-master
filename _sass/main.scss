@@ -5,6 +5,11 @@ body {
         overflow-y: hidden;
     }
 }
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    @media (min-width: 1200px) {
+        max-width: 960px;
+    }
+}
 header {
     position: fixed;
     top: 0;
@@ -45,14 +50,16 @@ header {
             margin-bottom: 1.5rem;
             @media (min-width: 768px) {
                 float: left;
-                margin-right: 4rem;
+                // margin-right: 4rem;
+                margin-right: 2.5rem;
             }
         }
         &--image {
             position: relative;
             width: 250px;
             height: 250px;
-            border-radius: 50%;
+            // border-radius: 50%;
+            border-radius: 2px;
             border: 2px solid $black;
             overflow: hidden;
             @media (min-width: 768px) {
@@ -66,7 +73,8 @@ header {
                 width: calc(100% - 2rem);
                 height: calc(100% - 2rem);
                 transform: translate(-50%, -50%);
-                border-radius: 50%;
+                // border-radius: 50%;
+                border-radius: 2px;
                 overflow: hidden;
             }
         }
