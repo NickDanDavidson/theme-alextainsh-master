@@ -8,10 +8,14 @@ permalink: /
 <div id="mainCarousel" class="container carousel" data-interval="false" data-hover="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            {% capture home_images %}{{ page.home_section.home_images }}{% endcapture %}
+            <!-- {% capture home_images %}{{ page.home_section.home_images }}{% endcapture %}
             {% capture home_header %}{{ page.home_section.hero_header }}{% endcapture %}
             {% capture home_subheader1 %}{{ page.home_section.hero_subheader1 }}{% endcapture %}
-            {% capture home_subheader2 %}{{ page.home_section.hero_subheader2 }}{% endcapture %}
+            {% capture home_subheader2 %}{{ page.home_section.hero_subheader2 }}{% endcapture %} -->
+            {% assign home_images = page.home_section.home_images %}
+            {% assign home_header = page.home_section.hero_header %}
+            {% assign home_subheader1 = page.home_section.hero_subheader1 %}
+            {% assign home_subheader2 = page.home_section.hero_subheader2 %}
 
             {% include front_template.html
                 images=home_images
@@ -20,10 +24,14 @@ permalink: /
                 subheader2=home_subheader2 %}
         </div>
         <div class="carousel-item">
-            {% capture about_heading %}{{ page.about_section.heading }}{% endcapture %}
+            <!-- {% capture about_heading %}{{ page.about_section.heading }}{% endcapture %}
             {% capture about_image %}{{ page.about_section.image }}{% endcapture %}
             {% capture about_lead_in %}{{ page.about_section.lead_in }}{% endcapture %}
-            {% capture about_content %}{{ page.about_section.content }}{% endcapture %}
+            {% capture about_content %}{{ page.about_section.content }}{% endcapture %} -->
+            {% assign about_heading = page.about_section.heading %}
+            {% assign about_image = page.about_section.image %}
+            {% assign about_lead_in = page.about_section.lead_in %}
+            {% assign about_content = page.about_section.content %}
 
             {% include about_template.html
                 heading=about_heading
@@ -32,10 +40,14 @@ permalink: /
                 content=about_content %}
         </div>
         <div class="carousel-item">
-            {% capture work_head_header %}{{ page.work_section.header }}{% endcapture %}
+            <!-- {% capture work_head_header %}{{ page.work_section.header }}{% endcapture %}
             {% capture work_head_copy %}{{ page.work_section.head_copy }}{% endcapture %}
             {% capture work_head_video %}{{ page.work_section.head_video }}{% endcapture %}
-            {% capture work_sections %}{{ page.work_section.sections }}{% endcapture %}
+            {% capture work_sections %}{{ page.work_section.sections }}{% endcapture %} -->
+            {% assign work_head_header = page.work_section.header %}
+            {% assign work_head_copy = page.work_section.head_copy %}
+            {% assign work_head_video = page.work_section.head_video %}
+            {% assign work_sections = page.work_section.sections %}
 
             {% include work_template.html
                 head_header=work_head_header
@@ -44,10 +56,14 @@ permalink: /
                 sections=work_sections %}
         </div>
         <div class="carousel-item">
-            {% capture grid_heading %}{{ page.grid_section.heading }}{% endcapture %}
+            <!-- {% capture grid_heading %}{{ page.grid_section.heading }}{% endcapture %}
             {% capture grid_copy %}{{ page.grid_section.copy }}{% endcapture %}
             {% capture grid_images_of_me %}{{ page.grid_section.images_of_me}}{% endcapture %}
-            {% capture grid_images_by_me %}{{ page.grid_section.images_by_me }}{% endcapture %}
+            {% capture grid_images_by_me %}{{ page.grid_section.images_by_me }}{% endcapture %} -->
+            {% assign grid_heading = page.grid_section.heading %}
+            {% assign grid_copy = page.grid_section.copy %}
+            {% assign grid_images_of_me page.grid_section.images_of_me %}
+            {% assign grid_images_by_me = page.grid_section.images_by_me %}
 
             {% include media_template.html
                 heading=grid_heading
@@ -56,9 +72,12 @@ permalink: /
                 images_by_me=grid_images_by_me %}
         </div>
         <div class="carousel-item">
-            {% capture contact_heading %}{{ page.contact_section.heading }}{% endcapture %}
+            <!-- {% capture contact_heading %}{{ page.contact_section.heading }}{% endcapture %}
             {% capture contact_copy %}{{ page.contact_section.copy }}{% endcapture %}
-            {% capture contact_image %}{{ page.contact_section.side_image }}{% endcapture %}
+            {% capture contact_image %}{{ page.contact_section.side_image }}{% endcapture %} -->
+            {% assign contact_heading = page.contact_section.heading %}
+            {% assign contact_copy = page.contact_section.copy %}
+            {% assign contact_image = page.contact_section.side_image %}
 
             {% include contact_template.html
                 heading=contact_heading
