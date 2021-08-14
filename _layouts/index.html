@@ -3,6 +3,7 @@ layout: default
 title: Home
 permalink: /
 ---
+<p>{{ page | jsonify | escape }}</p>
 
 <div id="mainCarousel" class="container carousel" data-interval="false" data-hover="false">
     <div class="carousel-inner">
@@ -11,10 +12,6 @@ permalink: /
             {% capture home_header %}{{ page.home_section.hero_header }}{% endcapture %}
             {% capture home_subheader1 %}{{ page.home_section.hero_subheader1 }}{% endcapture %}
             {% capture home_subheader2 %}{{ page.home_section.hero_subheader2 }}{% endcapture %}
-
-            <p>{{ home.home_section }}</p>
-            <!-- <p>{{ page.home_section.hero_subheader1 }}</p>
-            <p>{{ page.home_section.hero_subheader2 }}</p> -->
 
             {% include front_template.html
                 images=home_images
