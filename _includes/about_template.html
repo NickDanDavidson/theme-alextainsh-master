@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col wysiwyg px-0 px-md-5">
-                {{ include.lead_in }}
+                {{ include.lead_in | markdownify }}
             </div>
         </div>
         <div class="row">
@@ -22,6 +22,7 @@
             <div class="col py-5 wysiwyg">
                 {{ include.content | markdownify }}
             </div>
+            <a href="{{ include.file }}" target="_blank" rel="noopener">View Full Resume</a>
         </div>
     </div>
 </section>
