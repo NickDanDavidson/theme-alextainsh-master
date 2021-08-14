@@ -12,6 +12,10 @@ permalink: /
             {% capture home_subheader1 %}{{ page.home_section.hero_subheader1 }}{% endcapture %}
             {% capture home_subheader2 %}{{ page.home_section.hero_subheader2 }}{% endcapture %}
 
+            <p>{{ home_header }}</p>
+            <p>{{ home_subheader1 }}</p>
+            <p>{{ home_subheader2 }}</p>
+
             {% include front_template.html
                 images=home_images
                 header=home_header
