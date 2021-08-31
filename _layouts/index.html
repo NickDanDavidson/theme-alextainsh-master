@@ -13,7 +13,6 @@ permalink: /
                 subheader2=page.home_section.hero_subheader2 %}
         </div>
         <div class="carousel-item">
-            {{ page | jsonify | escape }}
             {% include about_template.html
                 heading=page.about_section.heading
                 image=page.about_section.image
